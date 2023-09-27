@@ -1,0 +1,21 @@
+{
+  "name": "devjobs",
+  "version": "1.0.0",
+  "description": "Job finder web using node, express, mongodb and svelte",
+  "main": "app.js",
+  "scripts": {
+    "start": "set NODE_ENV=development&& nodemon server.js",
+    "start:prod": "set NODE_ENV=production&& nodemon server.js"
+  },
+  "author": "Minilik Zeru",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.2",
+    "morgan": "^1.10.0",
+    "node-wsl": "^2.0.0",
+    "svelte": "^4.2.1"
+  }
+}

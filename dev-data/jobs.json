@@ -1,0 +1,310 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "companyName": "Infinite Innovations",
+    "position": "Fulltime",
+    "photo": "./assets/logos/infinite-innovations.png",
+    "location": "San Francisco, CA",
+    "description": "Join us and be part of our cutting-edge technology team. We value innovation and creativity.",
+    "requirements": {
+      "content": "Bachelor's degree in Computer Science, 5+ years of experience in software development.",
+      "items": [
+        "Experience with JavaScript, Node.js, and React",
+        "Strong problem-solving skills",
+        "Excellent teamwork and communication skills"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Develop and maintain software applications, collaborate with cross-functional teams, troubleshoot and debug issues.",
+      "items": [
+        "Write clean, efficient, and maintainable code",
+        "Participate in code reviews",
+        "Stay up-to-date with the latest industry trends and technologies"
+      ]
+    },
+    "salary": 120000,
+    "applicationDeadline": "2023-09-30",
+    "experienceLevel": "Senior",
+    "isRemote": false
+  },
+  {
+    "title": "UI/UX Designer",
+    "companyName": "PixelCrafters",
+    "position": "Fulltime",
+    "photo": "./assets/logos/pixel-crafters.png",
+    "location": "New York, NY",
+    "description": "We are seeking a talented UI/UX designer to create visually stunning and user-friendly interfaces.",
+    "requirements": {
+      "content": "Bachelor's degree in Design or related field, 3+ years of UI/UX design experience.",
+      "items": [
+        "Proficiency in Adobe Creative Suite",
+        "Strong portfolio showcasing previous design work",
+        "Attention to detail and a passion for design"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Design and prototype user interfaces, conduct user research, and collaborate with developers and product managers.",
+      "items": [
+        "Create wireframes and mockups",
+        "Conduct user testing and gather feedback",
+        "Stay updated on design trends and best practices"
+      ]
+    },
+    "salary": 90000,
+    "applicationDeadline": "2023-10-15",
+    "experienceLevel": "Mid-Level",
+    "isRemote": false
+  },
+  {
+    "title": "Data Scientist",
+    "companyName": "Quantum Insights",
+    "position": "Fulltime",
+    "photo": "./assets/logos/quantum-insights.png",
+    "location": "Seattle, WA",
+    "description": "Join our data science team and work on cutting-edge projects in machine learning and AI.",
+    "requirements": {
+      "content": "Master's or PhD in Data Science or related field, 2+ years of data science experience.",
+      "items": [
+        "Proficiency in Python and data analysis libraries",
+        "Experience with machine learning algorithms",
+        "Strong analytical and problem-solving skills"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Analyze data, build predictive models, and communicate insights to stakeholders.",
+      "items": [
+        "Collect and preprocess data",
+        "Develop and deploy machine learning models",
+        "Collaborate with cross-functional teams"
+      ]
+    },
+    "salary": 110000,
+    "applicationDeadline": "2023-09-25",
+    "experienceLevel": "Mid-Level",
+    "isRemote": false
+  },
+  {
+    "title": "Content Writer",
+    "companyName": "WordCrafters",
+    "position": "Freelance",
+    "photo": "./assets/logos/word-crafters.png",
+    "location": "Remote",
+    "description": "We are looking for talented content writers to create engaging and informative articles.",
+    "requirements": {
+      "content": "Bachelor's degree in English, Journalism, or related field, strong writing skills.",
+      "items": [
+        "Excellent grammar and punctuation",
+        "Ability to write clear and concise content",
+        "Research skills to generate informative articles"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Write articles, blog posts, and web content on various topics and industries.",
+      "items": [
+        "Conduct research to gather information",
+        "Edit and proofread content",
+        "Meet deadlines and work independently"
+      ]
+    },
+    "salary": 5000,
+    "applicationDeadline": "2023-09-20",
+    "experienceLevel": "Junior",
+    "isRemote": true
+  },
+  {
+    "title": "Marketing Manager",
+    "companyName": "Viral Dynamics",
+    "position": "Fulltime",
+    "photo": "./assets/logos/viral-dynamics.png",
+    "location": "Los Angeles, CA",
+    "description": "Lead our marketing efforts and drive the growth of our brand in the digital space.",
+    "requirements": {
+      "content": "Bachelor's degree in Marketing or related field, 4+ years of marketing experience.",
+      "items": [
+        "Digital marketing expertise",
+        "Proven track record of successful campaigns",
+        "Strong leadership and communication skills"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Develop and execute marketing strategies, manage digital campaigns, and analyze performance.",
+      "items": [
+        "Create and manage marketing campaigns",
+        "Analyze market trends and competitors",
+        "Lead a team of marketing professionals"
+      ]
+    },
+    "salary": 100000,
+    "applicationDeadline": "2023-10-10",
+    "experienceLevel": "Senior",
+    "isRemote": false
+  },
+  {
+    "title": "Mobile App Developer",
+    "companyName": "AppGenius",
+    "position": "Fulltime",
+    "photo": "./assets/logos/app-genius.png",
+    "location": "San Diego, CA",
+    "description": "Join our mobile app development team and build innovative and user-friendly applications.",
+    "requirements": {
+      "content": "Bachelor's degree in Computer Science, 3+ years of mobile app development experience.",
+      "items": [
+        "Proficiency in iOS and Android app development",
+        "Experience with app design principles",
+        "Strong problem-solving skills"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Design and develop mobile applications, collaborate with designers, and ensure high-quality user experiences.",
+      "items": [
+        "Code and test mobile apps",
+        "Optimize app performance",
+        "Stay updated on mobile app trends"
+      ]
+    },
+    "salary": 95000,
+    "applicationDeadline": "2023-10-05",
+    "experienceLevel": "Mid-Level",
+    "isRemote": false
+  },
+  {
+    "title": "Social Media Manager",
+    "companyName": "SocialSavvy",
+    "position": "Fulltime",
+    "photo": "./assets/logos/social-savvy.png",
+    "location": "Chicago, IL",
+    "description": "Manage our social media presence and engage with our audience on various platforms.",
+    "requirements": {
+      "content": "Bachelor's degree in Marketing or related field, 2+ years of social media management experience.",
+      "items": [
+        "Proficiency in social media platforms",
+        "Content creation and scheduling skills",
+        "Excellent communication and creativity"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Create and curate content, schedule posts, and interact with followers to build brand awareness.",
+      "items": [
+        "Plan and execute social media campaigns",
+        "Analyze engagement metrics",
+        "Stay updated on social media trends"
+      ]
+    },
+    "salary": 75000,
+    "applicationDeadline": "2023-09-28",
+    "experienceLevel": "Mid-Level",
+    "isRemote": false
+  },
+  {
+    "title": "Graphic Designer",
+    "companyName": "Artistic Visions",
+    "position": "Fulltime",
+    "photo": "./assets/logos/artistic-visions.png",
+    "location": "Denver, CO",
+    "description": "Create visually stunning graphics and artwork for a variety of projects.",
+    "requirements": {
+      "content": "Bachelor's degree in Design or related field, 3+ years of graphic design experience.",
+      "items": [
+        "Proficiency in Adobe Creative Suite",
+        "Strong portfolio showcasing design work",
+        "Creativity and attention to detail"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Design graphics for marketing materials, websites, and print media.",
+      "items": [
+        "Create visual concepts and layouts",
+        "Collaborate with clients and teams",
+        "Meet project deadlines"
+      ]
+    },
+    "salary": 80000,
+    "applicationDeadline": "2023-09-27",
+    "experienceLevel": "Mid-Level",
+    "isRemote": false
+  },
+  {
+    "title": "Blockchain Developer",
+    "companyName": "CryptoTech Innovations",
+    "position": "Fulltime",
+    "photo": "./assets/logos/crypto-tech-innovations.png",
+    "location": "Remote",
+    "description": "Join our blockchain development team and work on innovative projects in the cryptocurrency space.",
+    "requirements": {
+      "content": "Bachelor's degree in Computer Science, 2+ years of blockchain development experience.",
+      "items": [
+        "Solidity and Ethereum smart contract development",
+        "Understanding of blockchain technologies",
+        "Problem-solving skills"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Develop and deploy blockchain solutions, collaborate with blockchain experts, and contribute to the crypto community.",
+      "items": [
+        "Code and test smart contracts",
+        "Participate in blockchain projects",
+        "Stay updated on blockchain trends"
+      ]
+    },
+    "salary": 90000,
+    "applicationDeadline": "2023-10-01",
+    "experienceLevel": "Mid-Level",
+    "isRemote": true
+  },
+  {
+    "title": "AI Research Scientist",
+    "companyName": "CogniMind Labs",
+    "position": "Fulltime",
+    "photo": "./assets/logos/cogni-mind-labs.png",
+    "location": "Boston, MA",
+    "description": "Join our AI research team and work on cutting-edge artificial intelligence projects.",
+    "requirements": {
+      "content": "PhD in Artificial Intelligence or related field, research experience in AI, and programming skills.",
+      "items": [
+        "Machine learning and deep learning expertise",
+        "Publication record in AI research",
+        "Analytical and research skills"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Conduct AI research, develop algorithms, and collaborate with a team of AI scientists.",
+      "items": [
+        "Design and implement AI models",
+        "Publish research findings",
+        "Stay updated on AI advancements"
+      ]
+    },
+    "salary": 120000,
+    "applicationDeadline": "2023-09-26",
+    "experienceLevel": "Senior",
+    "isRemote": false
+  },
+  {
+    "title": "Video Game Developer",
+    "companyName": "PixelPioneers",
+    "position": "Fulltime",
+    "photo": "./assets/logos/pixel-pioneers.png",
+    "location": "Austin, TX",
+    "description": "Join our game development team and create immersive and entertaining video games.",
+    "requirements": {
+      "content": "Bachelor's degree in Game Design or related field, 3+ years of game development experience.",
+      "items": [
+        "Proficiency in Unity or Unreal Engine",
+        "Experience with game design principles",
+        "Passion for video games"
+      ]
+    },
+    "jobResponsibilities": {
+      "content": "Design and develop video games, collaborate with artists, and ensure high-quality gameplay experiences.",
+      "items": [
+        "Code game mechanics and features",
+        "Optimize game performance",
+        "Stay updated on gaming trends"
+      ]
+    },
+    "salary": 95000,
+    "applicationDeadline": "2023-10-03",
+    "experienceLevel": "Mid-Level",
+    "isRemote": false
+  }
+]
