@@ -22,7 +22,7 @@ app.use(express.json());
 //   res.send('Welcome To Books API');
 // });
 
-app.use(express.static(`${__dirname}/build`));
+app.use(express.static(`${__dirname}/client/build`));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
