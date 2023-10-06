@@ -16,8 +16,3 @@ export const load = async ({ params }) => {
     };
   }
 };
-
-export const prerender = {
-    enabled: true,
-    crawl: true,
-  }
