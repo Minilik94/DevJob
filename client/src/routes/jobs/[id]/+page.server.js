@@ -1,13 +1,23 @@
 import { error } from '@sveltejs/kit';
 
-export const  load = async ({params}) => {
-    const response = await fetch(`http://127.0.0.1:3000/api/v1/jobs/${params.id}`)
-    // console.log(response);
-    if(!response.ok) {
-        throw error(response.status, 'Job not found')
+export const load = async ({ params }) => {
+  try {
+    const response = await fetch(`http://127.0.0.1:3000/api/v1/jobs/${params.id}`);
+    if (!response.ok) {
+      throw error(response.status, 'Job not found');
     }
-    const jobs = await response.json()
+    const jobs = await response.json();
     return {
-        jobs
+      jobs
     };
+  } catch (error) {
+    return {
+      error: 'Failed to retrieve the page. Please try again later.'
+    };
+  }
 };
+
+export const prerender = {
+    enabled: true,
+    crawl: true,
+  }

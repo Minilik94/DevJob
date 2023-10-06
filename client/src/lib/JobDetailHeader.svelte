@@ -37,7 +37,7 @@
   <div class="card__container--img">
     <!-- Add image here -->
     <img
-      src="../../src/assets/logos/{job.photo}"
+      src="../assets/logos/{job.photo}"
       class="img"
       alt={job.photo}
       style="background-color: {job.logobg};"
@@ -50,7 +50,8 @@
     </p>
   </div>
   <div class="card__container--companySite">
-    <a href="{job.companyName.toLowerCase()}.com">Company Site</a>
+    <a href="https://{job.companyName.toLowerCase()}.com" target="_blank
+    ">Company Site</a>
   </div>
 </div>
 

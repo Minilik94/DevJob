@@ -59,7 +59,7 @@
       <div class="card" class:dark-mode={$darkMode}>
         <div class="img-container">
           <img
-            src="../../src/assets/logos/{job.photo}"
+            src="../assets/logos/{job.photo}"
             class="img"
             alt={job.photo}
             style="background-color: {job.logobg};"
