@@ -1,0 +1,8 @@
+{
+	"/": [
+		"src/routes/+page.js"
+	],
+	"/jobs/[id]": [
+		"src/routes/jobs/[id]/+page.server.js"
+	]
+}
