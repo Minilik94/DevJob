@@ -68,9 +68,7 @@
       </p>
       <h3 class:dark-job={$darkMode}>Requirements</h3>
       <p class="job-reqs">
-        {job.requirements.content}{job.requirements.content}{job.requirements
-          .content}{job.requirements.content}{job.requirements.content}{job
-          .requirements.content}{job.requirements.content}
+        {job.requirements.content}
       </p>
 
       <ul>
@@ -83,10 +81,7 @@
 
       <h3 class="job-todo" class:dark-job={$darkMode}>What will you do</h3>
       <p class="job__todo--general">
-        {job.jobResponsibilities.content}{job.jobResponsibilities.content}{job
-          .jobResponsibilities.content}{job.jobResponsibilities.content}{job
-          .jobResponsibilities.content}{job.jobResponsibilities.content}{job
-          .jobResponsibilities.content}{job.jobResponsibilities.content}
+        {job.jobResponsibilities.content}
       </p>
       <ol>
         {#each job.jobResponsibilities.items as jobRes}

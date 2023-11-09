@@ -19,7 +19,7 @@ const css = {
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="container svelte-1lqjuax">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <div class="content svelte-1lqjuax">${slots.default ? slots.default({}) : ``}</div> <footer>${`<p style="text-align: center; color: #9da3dc;" data-svelte-h="svelte-qduywe">© Minilik Zeru 2023</p> <i class="svelte-1lqjuax" data-svelte-h="svelte-13hhcdc">🤐📨🚚🏇😁</i>`}</footer> </div>`;
+  return `<div class="container svelte-1lqjuax">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <div class="content svelte-1lqjuax">${slots.default ? slots.default({}) : ``}</div> <footer>${`<p style="text-align: center; color: #9da3dc;" data-svelte-h="svelte-qduywe">© Minilik Zeru 2023</p>  <i class="svelte-1lqjuax"></i>`}</footer> </div>`;
 });
 export {
   Layout as default

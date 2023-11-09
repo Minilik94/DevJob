@@ -19,10 +19,11 @@
       <p style="text-align: center; color: #9da3dc;">
         &copy; Minilik Zeru 2023
       </p>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <i
         on:click={() => {
           showOwner = false;
-        }}>🤐📨🚚🏇😁</i
+        }}></i
       >
     {:else}
       <p style="text-align: center; color: #9da3dc;">
