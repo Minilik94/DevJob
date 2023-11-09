@@ -1,9 +1,6 @@
 {
   "name": "client",
   "version": "0.0.1",
-  "proxy": {
-    "/api": "http://localhost:3000"
-  },
   "private": true,
   "scripts": {
     "dev": "vite dev",

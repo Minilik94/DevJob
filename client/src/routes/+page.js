@@ -1,7 +1,7 @@
 
 import { error } from "@sveltejs/kit";
 
-export const  load = async () => {
+export const  load = async ({fetch}) => {
     const response = await fetch('/api/v1/jobs')
 
     if(!response.ok || response.ok === undefined) {

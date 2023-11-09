@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 
-export const load = async ({ params }) => {
+export const load = async ({ params, fetch }) => {
   try {
     const response = await fetch(`/api/v1/jobs/${params.id}`);
     if (!response.ok) {
