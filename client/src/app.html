@@ -3,43 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <meta name="google-site-verification" content="tLwSY-sCSyflthL65rzVskAXEYwvTDU5iV2QSrJLuO4" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
     %sveltekit.head%
+
+    <!-- ✅ DEBUG: Confirm this file is being used -->
+    <script>
+      console.log("✅ app.html loaded");
+    </script>
+
+    <!-- ✅ Manual script injection for Privacy Analytics -->
+    <script>
+      console.log("🛰️ Injecting Privacy Analytics script...");
+      var js = document.createElement('script');
+      js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
+      js.async = true;
+      js.onload = function () {
+        console.log("✅ Privacy Analytics script loaded");
+
+        if (typeof pa === 'function') {
+          pa('trackPageview');
+        } else {
+          console.warn("⚠️ Privacy Analytics global `pa` not defined");
+        }
+      };
+      js.onerror = function () {
+        console.error("❌ Failed to load Privacy Analytics script");
+      };
+      document.head.appendChild(js);
+    </script>
   </head>
+
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">%sveltekit.body%</div>
-    <!-- Privacy Analytics Tracking Code for https://devjobs-by-minilik-zeru.onrender.com -->
-<script>
-  (function(w,d,s,o,f,js,fjs){
-    w['PrivacyAnalytics']=o;w[o]=w[o]||function(){
-      (w[o].q=w[o].q||[]).push(arguments)
-    };
-    js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];
-    js.src=f;js.async=1;fjs.parentNode.insertBefore(js,fjs);
-  }(window,document,'script','pa','https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a'));
-  
-  pa('trackPageview');
-</script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-467TE1K9ER"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-467TE1K9ER');
-</script>
-<!-- End Privacy Analytics Tracking Code -->
   </body>
 </html>
