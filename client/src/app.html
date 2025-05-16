@@ -25,23 +25,6 @@
       console.log("✅ app.html loaded");
     </script>
 <script>
-  (function(w,d,s,o,f,js,fjs){
-    w['PrivacyAnalytics']=o;w[o]=w[o]||function(){
-      (w[o].q=w[o].q||[]).push(arguments)
-    };
-    js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];
-    js.src=f;js.async=1;
-    js.onload = function() {
-      pa('init', '468c460f-3b52-499c-b5b5-4ed91039f11a', {
-        endpoint: 'https://rp-blond.vercel.app/api/collect',
-        debug: true
-      });
-      pa('trackPageview');
-    };
-    fjs.parentNode.insertBefore(js,fjs);
-  }(window,document,'script','pa','https://rp-blond.vercel.app/tracker.js'));
-</script>
-<script>
   console.log("🛰️ Injecting Privacy Analytics script...");
 
   const js = document.createElement('script');
