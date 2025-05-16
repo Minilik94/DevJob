@@ -24,43 +24,22 @@
     <script>
       console.log("✅ app.html loaded");
     </script>
-
 <script>
-  console.log("🛰️ Injecting Privacy Analytics script...");
-
-  const js = document.createElement('script');
-  js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
-  js.async = true;
-
-  js.onload = function () {
-    console.log("✅ Privacy Analytics script loaded");
-
-    let attempts = 0;
-    const maxAttempts = 10;
-    const retryDelay = 500;
-
-    function checkAnalytics() {
-      attempts++;
-      if (window.Analytics_6nzwql && typeof window.Analytics_6nzwql.trackEvent_6nzwql === 'function') {
-        console.log("📡 Privacy Analytics is ready!");
-        // Here you can call the tracking event if needed or just wait for your code to call it
-      } else if (attempts < maxAttempts) {
-        console.warn(`⚠️ Privacy Analytics global \`Analytics_6nzwql\` not ready, retrying... (${attempts})`);
-        setTimeout(checkAnalytics, retryDelay);
-      } else {
-        console.error("❌ Privacy Analytics global `Analytics_6nzwql` not defined or missing `trackEvent_6nzwql` after retries");
-        console.log("window.Analytics_6nzwql currently is:", window.Analytics_6nzwql);
-      }
-    }
-
-    checkAnalytics();
-  };
-
-  js.onerror = function () {
-    console.error("❌ Failed to load Privacy Analytics script");
-  };
-
-  document.head.appendChild(js);
+  (function(w,d,s,o,f,js,fjs){
+    w['PrivacyAnalytics']=o;w[o]=w[o]||function(){
+      (w[o].q=w[o].q||[]).push(arguments)
+    };
+    js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];
+    js.src=f;js.async=1;
+    js.onload = function() {
+      pa('init', '468c460f-3b52-499c-b5b5-4ed91039f11a', {
+        endpoint: 'https://rp-cj8auqkfh-miniliks-projects.vercel.app/collect',
+        debug: true
+      });
+      pa('trackPageview');
+    };
+    fjs.parentNode.insertBefore(js,fjs);
+  }(window,document,'script','pa','https://rp-cj8auqkfh-miniliks-projects.vercel.app/tracker.js'));
 </script>
 
 
