@@ -42,14 +42,14 @@
     function checkAnalytics() {
       attempts++;
       if (window.Analytics_6nzwql && typeof window.Analytics_6nzwql.trackEvent_6nzwql === 'function') {
-        console.log("📡 Tracking pageview...");
-        window.Analytics_6nzwql.trackEvent_6nzwql('pageview');
+        console.log("📡 Privacy Analytics is ready!");
+        // Here you can call the tracking event if needed or just wait for your code to call it
       } else if (attempts < maxAttempts) {
         console.warn(`⚠️ Privacy Analytics global \`Analytics_6nzwql\` not ready, retrying... (${attempts})`);
         setTimeout(checkAnalytics, retryDelay);
       } else {
         console.error("❌ Privacy Analytics global `Analytics_6nzwql` not defined or missing `trackEvent_6nzwql` after retries");
-        console.log("window.Analytics_6nzwql:", window.Analytics_6nzwql);
+        console.log("window.Analytics_6nzwql currently is:", window.Analytics_6nzwql);
       }
     }
 
@@ -62,6 +62,7 @@
 
   document.head.appendChild(js);
 </script>
+
 
     <script>
           console.log("🚀 Sending test request to /api/test...");
