@@ -41,7 +41,35 @@
     fjs.parentNode.insertBefore(js,fjs);
   }(window,document,'script','pa','https://rp-blond.vercel.app/tracker.js'));
 </script>
+<script>
+  console.log("🛰️ Injecting Privacy Analytics script...");
 
+  const js = document.createElement('script');
+  js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
+  js.async = true;
+
+  js.onload = function () {
+    console.log("✅ Privacy Analytics script loaded");
+
+    if (window.Analytics_frazqn && typeof window.Analytics_frazqn.trackEvent_frazqn === 'function') {
+      console.log("📡 Privacy Analytics is ready!");
+      // Track a pageview or event
+      window.Analytics_frazqn.trackEvent_frazqn('pageview', {
+        url: window.location.href,
+        title: document.title
+      });
+    } else {
+      console.error("❌ Privacy Analytics global `Analytics_frazqn` not defined or missing `trackEvent_frazqn`");
+      console.log("window.Analytics_frazqn currently is:", window.Analytics_frazqn);
+    }
+  };
+
+  js.onerror = function () {
+    console.error("❌ Failed to load Privacy Analytics script");
+  };
+
+  document.head.appendChild(js);
+</script>
   </head>
 
   <body data-sveltekit-preload-data="hover">
