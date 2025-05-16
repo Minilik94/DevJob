@@ -27,33 +27,44 @@
 
     <!-- ✅ Manual script injection for Privacy Analytics -->
     <script>
-        console.log("🛰️ Injecting Privacy Analytics script...");
-      
-        const js = document.createElement('script');
-        js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
-        js.async = true;
-      
-        js.onload = function () {
-          console.log("✅ Privacy Analytics script loaded");
-      
-          // Wait a tick to ensure pa is registered
-          setTimeout(() => {
-            if (window.pa && typeof window.pa.track === 'function') {
-              console.log("📡 Tracking pageview...");
-              window.pa.track('pageview'); // or whatever your API expects
-            } else {
-              console.warn("⚠️ Privacy Analytics global `pa` not defined or missing `track` method");
-              console.log("window.pa:", window.pa);
-            }
-          }, 0);
-        };
-      
-        js.onerror = function () {
-          console.error("❌ Failed to load Privacy Analytics script");
-        };
-      
-        document.head.appendChild(js);
-    </script>
+  console.log("🛰️ Injecting Privacy Analytics script...");
+
+  const js = document.createElement('script');
+  js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
+  js.async = true;
+
+  js.onload = function () {
+    console.log("✅ Privacy Analytics script loaded");
+
+    // Try multiple times to detect `pa` in case of async registration
+    let attempts = 0;
+    const maxAttempts = 5;
+    const checkPa = () => {
+      if (window.pa && typeof window.pa.track === 'function') {
+        console.log("📡 Tracking pageview...");
+        window.pa.track('pageview');
+      } else {
+        attempts++;
+        if (attempts < maxAttempts) {
+          console.warn(`⚠️ Privacy Analytics global \`pa\` not ready, retrying... (${attempts})`);
+          setTimeout(checkPa, 200); // Retry after 200ms
+        } else {
+          console.error("❌ Privacy Analytics global `pa` not defined or missing `track` method after retries");
+          console.log("window.pa:", window.pa);
+        }
+      }
+    };
+
+    checkPa();
+  };
+
+  js.onerror = function () {
+    console.error("❌ Failed to load Privacy Analytics script");
+  };
+
+  document.head.appendChild(js);
+</script>
+
 
   <script>
         console.log("🚀 Sending test request to /api/test...");
