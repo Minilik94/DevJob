@@ -25,8 +25,7 @@
       console.log("✅ app.html loaded");
     </script>
 
-    <!-- ✅ Manual script injection for Privacy Analytics -->
-    <script>
+<script>
   console.log("🛰️ Injecting Privacy Analytics script...");
 
   const js = document.createElement('script');
@@ -36,26 +35,25 @@
   js.onload = function () {
     console.log("✅ Privacy Analytics script loaded");
 
-    // Try multiple times to detect `pa` in case of async registration
     let attempts = 0;
-    const maxAttempts = 5;
-    const checkPa = () => {
-      if (window.pa && typeof window.pa.track === 'function') {
-        console.log("📡 Tracking pageview...");
-        window.pa.track('pageview');
-      } else {
-        attempts++;
-        if (attempts < maxAttempts) {
-          console.warn(`⚠️ Privacy Analytics global \`pa\` not ready, retrying... (${attempts})`);
-          setTimeout(checkPa, 200); // Retry after 200ms
-        } else {
-          console.error("❌ Privacy Analytics global `pa` not defined or missing `track` method after retries");
-          console.log("window.pa:", window.pa);
-        }
-      }
-    };
+    const maxAttempts = 10;
+    const retryDelay = 500;
 
-    checkPa();
+    function checkAnalytics() {
+      attempts++;
+      if (window.Analytics_6nzwql && typeof window.Analytics_6nzwql.trackEvent_6nzwql === 'function') {
+        console.log("📡 Tracking pageview...");
+        window.Analytics_6nzwql.trackEvent_6nzwql('pageview');
+      } else if (attempts < maxAttempts) {
+        console.warn(`⚠️ Privacy Analytics global \`Analytics_6nzwql\` not ready, retrying... (${attempts})`);
+        setTimeout(checkAnalytics, retryDelay);
+      } else {
+        console.error("❌ Privacy Analytics global `Analytics_6nzwql` not defined or missing `trackEvent_6nzwql` after retries");
+        console.log("window.Analytics_6nzwql:", window.Analytics_6nzwql);
+      }
+    }
+
+    checkAnalytics();
   };
 
   js.onerror = function () {
@@ -65,25 +63,24 @@
   document.head.appendChild(js);
 </script>
 
-
-  <script>
-        console.log("🚀 Sending test request to /api/test...");
-      
-        fetch("https://rp-blond.vercel.app/api/test", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ test: true })
-        })
-          .then(res => res.json())
-          .then(data => {
-            console.log("✅ Test API response:", data);
+    <script>
+          console.log("🚀 Sending test request to /api/test...");
+        
+          fetch("https://rp-blond.vercel.app/api/test", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ test: true })
           })
-          .catch(err => {
-            console.error("❌ Test API call failed:", err);
-          });
-  </script>
+            .then(res => res.json())
+            .then(data => {
+              console.log("✅ Test API response:", data);
+            })
+            .catch(err => {
+              console.error("❌ Test API call failed:", err);
+            });
+    </script>
 
   </head>
 
