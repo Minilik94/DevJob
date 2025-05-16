@@ -33,7 +33,7 @@
     js.src=f;js.async=1;
     js.onload = function() {
       pa('init', '468c460f-3b52-499c-b5b5-4ed91039f11a', {
-        endpoint: 'https://rp-blond.vercel.app/collect',
+        endpoint: 'https://rp-blond.vercel.app/api/collect',
         debug: true
       });
       pa('trackPageview');
@@ -51,16 +51,16 @@
   js.onload = function () {
     console.log("✅ Privacy Analytics script loaded");
 
-    if (window.Analytics_frazqn && typeof window.Analytics_frazqn.trackEvent_frazqn === 'function') {
+    if (window.Analytics_dwhhtf && typeof window.Analytics_dwhhtf.trackEvent_dwhhtf === 'function') {
       console.log("📡 Privacy Analytics is ready!");
-      // Track a pageview or event
-      window.Analytics_frazqn.trackEvent_frazqn('pageview', {
+      // Optional: Track a custom event
+      window.Analytics_dwhhtf.trackEvent_dwhhtf('pageview', {
         url: window.location.href,
         title: document.title
       });
     } else {
-      console.error("❌ Privacy Analytics global `Analytics_frazqn` not defined or missing `trackEvent_frazqn`");
-      console.log("window.Analytics_frazqn currently is:", window.Analytics_frazqn);
+      console.error("❌ Privacy Analytics global `Analytics_dwhhtf` not defined or missing `trackEvent_dwhhtf`");
+      console.log("window.Analytics_dwhhtf currently is:", window.Analytics_dwhhtf);
     }
   };
 
