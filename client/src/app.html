@@ -33,34 +33,14 @@
     js.src=f;js.async=1;
     js.onload = function() {
       pa('init', '468c460f-3b52-499c-b5b5-4ed91039f11a', {
-        endpoint: 'https://rp-cj8auqkfh-miniliks-projects.vercel.app/collect',
+        endpoint: 'https://rp-blond.vercel.app/collect',
         debug: true
       });
       pa('trackPageview');
     };
     fjs.parentNode.insertBefore(js,fjs);
-  }(window,document,'script','pa','https://rp-cj8auqkfh-miniliks-projects.vercel.app/tracker.js'));
+  }(window,document,'script','pa','https://rp-blond.vercel.app/tracker.js'));
 </script>
-
-
-    <script>
-          console.log("🚀 Sending test request to /api/test...");
-        
-          fetch("https://rp-blond.vercel.app/api/test", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ test: true })
-          })
-            .then(res => res.json())
-            .then(data => {
-              console.log("✅ Test API response:", data);
-            })
-            .catch(err => {
-              console.error("❌ Test API call failed:", err);
-            });
-    </script>
 
   </head>
 
