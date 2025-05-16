@@ -24,7 +24,7 @@
     <script>
       console.log("✅ app.html loaded");
     </script>
-<script>
+    <script>
   console.log("🛰️ Injecting Privacy Analytics script...");
 
   const js = document.createElement('script');
@@ -36,7 +36,6 @@
 
     if (window.Analytics_dwhhtf && typeof window.Analytics_dwhhtf.trackEvent_dwhhtf === 'function') {
       console.log("📡 Privacy Analytics is ready!");
-      // Optional: Track a custom event
       window.Analytics_dwhhtf.trackEvent_dwhhtf('pageview', {
         url: window.location.href,
         title: document.title
