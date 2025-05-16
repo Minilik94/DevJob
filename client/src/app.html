@@ -27,42 +27,52 @@
 
     <!-- ✅ Manual script injection for Privacy Analytics -->
     <script>
-      console.log("🛰️ Injecting Privacy Analytics script...");
-      var js = document.createElement('script');
-      js.src = 'https://rp-git-feature-test-miniliks-projects.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
-      js.async = true;
-      js.onload = function () {
-        console.log("✅ Privacy Analytics script loaded");
-
-        if (typeof pa === 'function') {
-          pa('trackPageview');
-        } else {
-          console.warn("⚠️ Privacy Analytics global `pa` not defined");
-        }
-      };
-      js.onerror = function () {
-        console.error("❌ Failed to load Privacy Analytics script");
-      };
-      document.head.appendChild(js);
+        console.log("🛰️ Injecting Privacy Analytics script...");
+      
+        const js = document.createElement('script');
+        js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
+        js.async = true;
+      
+        js.onload = function () {
+          console.log("✅ Privacy Analytics script loaded");
+      
+          // Wait a tick to ensure pa is registered
+          setTimeout(() => {
+            if (window.pa && typeof window.pa.track === 'function') {
+              console.log("📡 Tracking pageview...");
+              window.pa.track('pageview'); // or whatever your API expects
+            } else {
+              console.warn("⚠️ Privacy Analytics global `pa` not defined or missing `track` method");
+              console.log("window.pa:", window.pa);
+            }
+          }, 0);
+        };
+      
+        js.onerror = function () {
+          console.error("❌ Failed to load Privacy Analytics script");
+        };
+      
+        document.head.appendChild(js);
     </script>
-    <script>
-  console.log("🚀 Sending test request to /api/test...");
 
-  fetch("https://rp-git-feature-test-miniliks-projects.vercel.app/api/test", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ test: true })
-  })
-    .then(res => res.json())
-    .then(data => {
-      console.log("✅ Test API response:", data);
-    })
-    .catch(err => {
-      console.error("❌ Test API call failed:", err);
-    });
-</script>
+  <script>
+        console.log("🚀 Sending test request to /api/test...");
+      
+        fetch("https://https://rp-blond.vercel.app//api/test", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ test: true })
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log("✅ Test API response:", data);
+          })
+          .catch(err => {
+            console.error("❌ Test API call failed:", err);
+          });
+  </script>
 
   </head>
 
