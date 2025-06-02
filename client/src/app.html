@@ -24,24 +24,19 @@
     <script>
       console.log("✅ app.html loaded");
     </script>
-    <script>
-  console.log("🛰️ Injecting Privacy Analytics script...");
-
+  <!-- Privacy Analytics Tracking Code for https://devjobs-by-minilik-zeru.onrender.com/ -->
+<script>
   const js = document.createElement('script');
-  js.src = 'https://rp-blond.vercel.app/api/tracking/script?id=468c460f-3b52-499c-b5b5-4ed91039f11a';
+  js.src = 'https://privacy-analytics-v1.vercel.app/api/tracking/script?id=b4cd3fb3-be1d-46e9-a70b-7acaf0259c91';
   js.async = true;
 
   js.onload = function () {
-    console.log("✅ Privacy Analytics script loaded");
-
     if (window.Analytics_dwhhtf && typeof window.Analytics_dwhhtf.trackEvent_dwhhtf === 'function') {
-      console.log("📡 Privacy Analytics is ready!");
       window.Analytics_dwhhtf.trackEvent_dwhhtf('pageview', {
         url: window.location.href,
         title: document.title
       });
     } else {
-      console.error("❌ Privacy Analytics global `Analytics_dwhhtf` not defined or missing `trackEvent_dwhhtf`");
       console.log("window.Analytics_dwhhtf currently is:", window.Analytics_dwhhtf);
     }
   };
@@ -52,6 +47,7 @@
 
   document.head.appendChild(js);
 </script>
+<!-- End Privacy Analytics Tracking Code -->
   </head>
 
   <body data-sveltekit-preload-data="hover">
